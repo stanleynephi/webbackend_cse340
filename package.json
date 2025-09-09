@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "git-update": "git add . && git commit -m \"update to dynamic web site\" && git push"
   },
   "author": "",
   "license": "ISC",
