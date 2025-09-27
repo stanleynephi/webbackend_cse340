@@ -1,7 +1,7 @@
 --create an enumeration for the account_type
 CREATE TYPE account_type
 AS
-ENUM('Client','Employee','Admin')
+ENUM('Client','Employee','Admin');
 
 
 --classification table creation
@@ -20,12 +20,13 @@ CREATE TABLE IF NOT EXISTS public.inventory (
 	inv_year character(4) NOT NULL,
 	inv_description text NOT NULL,
 	inv_image character varying NOT NULL,
+	inv_thumbnail character varying NOT NULL,
 	inv_price numeric(9,0) NOT NULL,
 	inv_miles integer NOT NULL,
 	inv_color character varying NOT NULL,
 	classification_id integer NOT NULL,
 	CONSTRAINT inventory_pkey PRIMARY KEY (inv_id)
-)
+);
 
 --alter table relationship
 ALTER TABLE IF EXISTS public.inventory
@@ -54,8 +55,7 @@ VALUES ('Custom'),
 ('Sport'),
 ('SUV'),
 ('Truck'),
-('Sedan')
-
+('Sedan');
 
 --data insertion into the inventory
 -- Data for table `inventory`
@@ -244,9 +244,9 @@ VALUES   (
 --modify the description to the GM Hummer
 UPDATE public.inventory
 SET inv_description = REPLACE(inv_description, 'the small interiors', 'a huge interior')
-WHERE inv_id = 10
+WHERE inv_id = 10;
 
 --update statement for the the images url as well as the thumbnails
 UPDATE public.inventory
 SET inv_image = REPLACE (inv_image, '/images/','/images/vehicles/'),
-	inv_thumbnail = REPLACE(inv_thumbnail, '/images/', '/images/vehicles/')
+	inv_thumbnail = REPLACE(inv_thumbnail, '/images/', '/images/vehicles/');

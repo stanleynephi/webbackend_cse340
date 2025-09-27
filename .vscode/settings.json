@@ -10,8 +10,8 @@
       "previewLimit": 50,
       "server": "localhost",
       "driver": "PostgreSQL",
-      "name": "webbackenddev_database",
-      "connectString": "postgresql://webbackenddev_user:Pltg8Lt8p86EN0U03tBUMOECf1yQR9c3@dpg-d31ij7vfte5s73cc00s0-a.oregon-postgres.render.com/webbackenddev"
+      "name": "cse340_webbackenddevelopment",
+      "connectString": "postgresql://cse340_webbackenddevelopment_user:kIrFDKx77CR1UhRFlIq3tirKOOMgaHhN@dpg-d3c1ekqli9vc73d719lg-a.oregon-postgres.render.com/cse340_webbackenddevelopment"
     }
   ]
 }
